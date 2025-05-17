@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de Vídeos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload de Vídeos</h1>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <span>Espaço utilizado:</span>
+                <span id="usedSpace">Carregando...</span>
+            </div>
+            <div class="stat-item">
+                <span>Espaço disponível:</span>
+                <span id="availableSpace">Carregando...</span>
+            </div>
+        </div>
+
+        <div id="messages" class="message-container"></div>
+
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="file-input-container">
+                <label for="videoFile" class="file-label">Selecione um arquivo de vídeo</label>
+                <input type="file" id="videoFile" name="videoFile" accept="video/*">
+                <div class="file-info" id="fileInfo">Nenhum arquivo selecionado</div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            
+            <button type="submit" id="uploadButton">Enviar Vídeo</button>
+        </form>
+
+        <div class="video-list">
+            <h2>Vídeos Enviados</h2>
+            <ul id="videoList">
+                <li class="loading">Carregando lista de vídeos...</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
